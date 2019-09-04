@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Hero from "./components/Hero";
+import logo from './components/images/logo.png';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    rob: {
+      profilePic: logo,
+      name: "Rob Olive",
+      info: "Tall. Handsome. The Host of this podcast. Wannabe Web Dev. Pretty much running this thing."
+    },
+    ben: {
+      profilePic: logo,
+      name: "Ben Householder",
+      info: "Placeholder. Ben gets to write his info, unlike Colin."
+    },
+    colin: {
+      profilePic: logo,
+      name: "Colin Householder",
+      info: "Happy. Moderate. Optimist. These words don't describe him. Call him the Socialist Butterfly. Wants to seize the means of happiness."
+    }
+  }
+  render() {
+
+    return (
+      <div className="App container-fluid">
+        <Hero {...this.state}/>
+      </div>
+    );
+  }
 }
 
 export default App;
