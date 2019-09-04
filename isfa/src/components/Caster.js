@@ -3,7 +3,6 @@ import "./Caster.css"
 
 class Caster extends Component {
     render() {
-
         return (
             <div className = "col profileCard">
                 <div className = "row">

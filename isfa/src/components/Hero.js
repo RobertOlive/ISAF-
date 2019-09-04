@@ -16,10 +16,13 @@ class Hero extends Component {
                     <div className="row tagline">
                         <span className="col"><h2>Culture, Politics, and Philosophy... from those who know best?</h2></span>
                     </div>
-                    <div className="row">
-                        <Caster person = {this.props.rob}/>
+                    <div className="row justify-content-around">
+                        {this.props.hosts.map((element, i) => {
+                            return <Caster person = {element} key={i}/>
+                        })}
+                        {/* <Caster person = {this.props.rob}/>
                         <Caster person = {this.props.colin}/>
-                        <Caster person = {this.props.ben}/>
+                        <Caster person = {this.props.ben}/> */}
                     </div>
                 </div>
             </div>
