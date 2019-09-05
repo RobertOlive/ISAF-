@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
-import Hero from "./components/Hero";
+import Hero from "./components/Hero/Hero.js";
 import logo from './components/images/logo.png';
+import MainCont from './components/MainCont/MainCont.js';
 
 class App extends Component {
   state = {
@@ -29,15 +30,17 @@ class App extends Component {
     xhttp.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fispeakforamerica.libsyn.com%2Frss", true);
     xhttp.send();
     setTimeout(() => {
+      // console.log(xhttp.response);s
       this.setState({episodes: JSON.parse(xhttp.response).items})
       console.log(this.state)
-    }, 1000);
+    }, 100);
   }
 
   render() {
     return (
       <div className="App container-fluid">
         <Hero {...this.state}/>
+        <MainCont {...this.state}/>
       </div>
     );
   }

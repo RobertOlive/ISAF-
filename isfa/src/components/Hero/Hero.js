@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import Caster from "./Caster"
-import logo from "./images/logo.png"
+import Caster from "../Caster/Caster"
+import logo from "../images/logo.png"
 import "./Hero.css"
 
 class Hero extends Component {
@@ -8,7 +8,7 @@ class Hero extends Component {
         return (
             <div className="header row">
                 <div className="col-3">
-                    <img className="logo"src ={logo}></img>
+                    <img className="logo"src ={logo} alt="logo"></img>
                 </div>
 
                 <div className="col">
@@ -19,9 +19,6 @@ class Hero extends Component {
                         {this.props.hosts.map((element, i) => {
                             return <Caster person = {element} key={i}/>
                         })}
-                        {/* <Caster person = {this.props.rob}/>
-                        <Caster person = {this.props.colin}/>
-                        <Caster person = {this.props.ben}/> */}
                     </div>
                 </div>
             </div>
