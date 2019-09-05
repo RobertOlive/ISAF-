@@ -5,7 +5,6 @@ import "./Hero.css"
 
 class Hero extends Component {
     render() {
-        console.log(this.props);
         return (
             <div className="header row">
                 <div className="col-3">
