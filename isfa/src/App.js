@@ -23,20 +23,18 @@ class App extends Component {
       },
     ]
   }
-  render() {
+
+  componentDidMount() {
     let xhttp = new XMLHttpRequest();
     xhttp.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fispeakforamerica.libsyn.com%2Frss", true);
     xhttp.send();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        console.log(JSON.parse(this.response).items[0]);
-      }
-    };
-    console.log(xhttp);
     setTimeout(() => {
       this.setState({episodes: JSON.parse(xhttp.response).items})
       console.log(this.state)
     }, 1000);
+  }
+
+  render() {
     return (
       <div className="App container-fluid">
         <Hero {...this.state}/>
