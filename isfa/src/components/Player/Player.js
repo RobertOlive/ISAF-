@@ -25,6 +25,10 @@ class Player extends Component {
         }
     }
 
+    initProgressBar() {
+        document.getElementById("progressBar").value=document.getElementById("audio").currentTime
+    }
+
     render() {
         console.log(this.state.currentEp);
         return(
@@ -33,11 +37,18 @@ class Player extends Component {
                     <div id="triangle" className="triangle" onClick={this.playClick}></div>
                 </div>
                 <div className="currentTitle col">
-                    {this.props.episodes? this.props.episodes[0].title: "loading episode..."}
+                    {this.state.currentEp? this.state.currentEp.title: "loading episode..."}
                     <br/>
-                    <progress id="progressBar" value="22" max="100"></progress>
+                    <progress 
+                        id="progressBar" 
+                        value="0" max={this.state.currentEp? this.state.currentEp.enclosure.duration: "100"}
+                    />
                 </div>
-                <audio id="audio" src={this.props.episodes? this.props.episodes[0].enclosure.link: "none"}/>
+                <audio 
+                    id="audio" src={this.state.currentEp? this.state.currentEp.enclosure.link:"none"}
+                    onTimeUpdate={this.initProgressBar}
+                    loop={false}
+                />
             </div>
         )
     }

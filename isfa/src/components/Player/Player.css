@@ -1,15 +1,26 @@
 .player {
-    border: 1px solid #1d397b;
-    border-radius: .25em;
+    margin-top: 2em;
+    border-top: 1px solid #1d397b;
+    border-bottom: 1px solid #1d397b;
+    border-right: 1px solid #b3121c;
+
+
+    /* border-radius: .6em; */
 }
 
 .playBtn {
     width: 6em;
     height: 6em;
     background-color: transparent;
-    border: 1px solid #b3121c;
+    border-left: 1px solid #b3121c;
+    border-right: 2px solid #b3121c;
+
     position: relative;
-    border-radius: .5em;
+    /* border-radius: .5em; */
+}
+
+.playBtn:hover {
+    box-shadow: 0 .25em .5em rgba(0, 0, 0, 0.25) inset;
 }
 
 .triangle {
@@ -31,8 +42,39 @@
     margin:auto;
     width: 3em;
     height: 4em;
-
     border-left: 1em solid #1d397b;
-
     border-right: 1em solid #1d397b;
 }
+
+.currentTitle {
+    padding: 0;
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    height: 75%;
+}
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    /* border-radius: .5em; */
+    box-shadow: 0 .25em .25em rgba(0, 0, 0, 0.1) inset;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background-image:
+         /* -webkit-linear-gradient(0deg, 
+                                 transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                                 rgba(0,0, 0, .1) 66%, transparent 66%), */
+         -webkit-linear-gradient(top, 
+                                 rgba(255, 255, 255, .25), 
+                                 rgba(0, 0, 0, .25)),
+         /* -webkit-linear-gradient(left,  white,#1d397b,#b3121c); */
+         -webkit-linear-gradient(left,  #1d397b, #1d397b);
+
+  
+    /* border-radius: 0em .25em .25em 0em;  */
+      /* background-size: 35px 20px, 100% 100%, 100% 100%; */
+  }
