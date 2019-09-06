@@ -23,3 +23,16 @@
     border-left: 3em solid #1d397b;
     border-bottom: 2em solid transparent;
 }
+
+.pause {
+    position: absolute;
+    top:1em;
+    left:1.5em;
+    margin:auto;
+    width: 3em;
+    height: 4em;
+
+    border-left: 1em solid #1d397b;
+
+    border-right: 1em solid #1d397b;
+}
