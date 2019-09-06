@@ -30,7 +30,6 @@ class App extends Component {
     xhttp.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fispeakforamerica.libsyn.com%2Frss", true);
     xhttp.send();
     setTimeout(() => {
-      console.log(xhttp.response);
       this.setState({episodes: JSON.parse(xhttp.response).items})
       console.log(this.state)
     }, 100);
