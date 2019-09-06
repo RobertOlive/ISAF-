@@ -1,4 +1,6 @@
 .player {
+    max-width: 80%;
+    margin: auto;
     margin-top: 2em;
     border-top: 1px solid #1d397b;
     border-bottom: 1px solid #1d397b;

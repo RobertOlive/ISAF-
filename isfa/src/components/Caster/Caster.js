@@ -10,7 +10,9 @@ class Caster extends Component {
                     <span className="col name">{this.props.person.name}</span>
                 </div>
                 <div className="row">
-                    {this.props.person.info}
+                    <div className="col info">
+                        {this.props.person.info}
+                    </div>
                 </div>
             </div>
         )
