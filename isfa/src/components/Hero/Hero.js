@@ -7,11 +7,11 @@ class Hero extends Component {
     render() {
         return (
             <div className="header row">
-                <div className="col-3">
+                <div className="col-lg-3 col-sm-6">
                     <img className="logo"src ={logo} alt="logo"></img>
                 </div>
 
-                <div className="col">
+                <div className="col tagCards">
                     <div className="row tagline">
                         <span className="col"><h2>Culture, Politics, and Philosophy... from those who know best?</h2></span>
                     </div>

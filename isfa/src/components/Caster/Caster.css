@@ -1,8 +1,14 @@
 .profileCard {
     border: 1px solid black;
+    max-height: 50%;
 }
 
 .name {
     margin:auto;
     font-weight: bold;
+    /* width: 50%; */
+}
+
+.profilePic {
+    max-height: 50%;
 }
