@@ -10,6 +10,12 @@
     /* border-radius: .6em; */
 }
 
+
+.soviet {
+    border: 1px solid #a90000ff;
+    border-top: 1px solid #ecf47f;
+}
+
 .playBtn {
     width: 6em;
     height: 6em;
