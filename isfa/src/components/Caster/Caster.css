@@ -10,5 +10,6 @@
 }
 
 .profilePic {
-    max-height: 50%;
+    max-height: 10em;
+    max-width: 10em
 }
