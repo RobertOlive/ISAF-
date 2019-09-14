@@ -6,8 +6,8 @@ class Caster extends Component {
         return (
             <div className = "col profileCard">
                 <div className = "row">
-                    <img className ="col profilePic" src={this.props.person.profilePic} alt="profile pic"></img>
-                    <span className="col name">{this.props.person.name}</span>
+                    <img className ="col-12 profilePic" src={this.props.person.profilePic} alt="profile pic"></img>
+                    <span className="col-12 name">{this.props.person.name}</span>
                     <div></div>
                 </div>
                 <div className="row">
